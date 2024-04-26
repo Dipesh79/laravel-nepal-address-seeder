@@ -56,15 +56,15 @@ class LocalLevels
     public function getDistrictOneLocalLevels(): array
     {
         return [
-            ['name' => 'Bhojpur', 'wards' => 12, 'district_id' => 1],
-            ['name' => 'Shadanand', 'wards' => 14, 'district_id' => 1],
-            ['name' => 'Hatuwagadhi', 'wards' => 9, 'district_id' => 1],
-            ['name' => 'Ramprasad Rai', 'wards' => 8, 'district_id' => 1],
-            ['name' => 'Aamchowk', 'wards' => 10, 'district_id' => 1],
-            ['name' => 'Tyamke Maiyunm', 'wards' => 9, 'district_id' => 1],
-            ['name' => 'Arun Gaunpalika', 'wards' => 7, 'district_id' => 1],
-            ['name' => 'Pauwadungma', 'wards' => 6, 'district_id' => 1],
-            ['name' => 'Salpasilichho', 'wards' => 6, 'district_id' => 1]
+            ['name' => 'Bhojpur', 'wards' => 12, 'district_id' => 12],
+            ['name' => 'Shadanand', 'wards' => 14, 'district_id' => 14],
+            ['name' => 'Hatuwagadhi', 'wards' => 9, 'district_id' => 9],
+            ['name' => 'Ramprasad Rai', 'wards' => 8, 'district_id' => 8],
+            ['name' => 'Aamchowk', 'wards' => 10, 'district_id' => 10],
+            ['name' => 'Tyamke Maiyunm', 'wards' => 9, 'district_id' => 9],
+            ['name' => 'Arun', 'wards' => 7, 'district_id' => 7],
+            ['name' => 'Pauwadungma', 'wards' => 6, 'district_id' => 6],
+            ['name' => 'Salpasilichho', 'wards' => 6, 'district_id' => 6]
         ];
 
     }
@@ -81,10 +81,10 @@ class LocalLevels
             ['name' => 'Dhankuta', 'wards' => 12, 'district_id' => 2],
             ['name' => 'Pakhribas', 'wards' => 9, 'district_id' => 2],
             ['name' => 'Mahalaxmi', 'wards' => 9, 'district_id' => 2],
-            ['name' => 'Sangurigadhi', 'wards' => 1, 'district_id' => 2],
-            ['name' => 'Chaubise', 'wards' => 1, 'district_id' => 2],
-            ['name' => 'Shahidbhumi', 'wards' => 1, 'district_id' => 2],
-            ['name' => 'Chhathar Jorpati', 'wards' => 1, 'district_id' => 2]
+            ['name' => 'Sangurigadhi', 'wards' => 10, 'district_id' => 2],
+            ['name' => 'Chaubise', 'wards' => 8, 'district_id' => 2],
+            ['name' => 'Shahidbhumi', 'wards' => 7, 'district_id' => 2],
+            ['name' => 'Chhathar Jorpati', 'wards' => 6, 'district_id' => 2]
         ];
     }
 
@@ -1729,9 +1729,9 @@ class LocalLevels
             ['name' => 'Apihimal', 'wards' => 1, 'district_id' => 77],
             ['name' => 'Duhun', 'wards' => 1, 'district_id' => 77],
             ['name' => 'Naugad', 'wards' => 1, 'district_id' => 77],
-            ['name' => 'Marma', 'wards' => 1, 'district_id' => 77],
-            ['name' => 'Lekam', 'wards' => 1, 'district_id' => 77],
-            ['name' => 'Vyans', 'wards' => 1, 'district_id' => 77]
+            ['name' => 'Marma', 'wards' => 6, 'district_id' => 77],
+            ['name' => 'Lekam', 'wards' => 6, 'district_id' => 77],
+            ['name' => 'Vyans', 'wards' => 6, 'district_id' => 77]
         ];
     }
 }

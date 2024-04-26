@@ -23,7 +23,7 @@ class NepalAddressServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Commands\SeedAddressCommand::class,
+                \bootstrap\LaravelNepalAddressSeeder\src\Commands\SeedAddressCommand::class,
             ]);
         }
         if (method_exists($this, 'publishes')) {

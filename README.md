@@ -32,7 +32,7 @@ return [
      *
      * This is the model that will be used to seed the provinces.
      */
-    'province' => '\Dipesh79\LaravelNepalAddressSeeder\Models\Province',
+    'province' => '\bootstrap\LaravelNepalAddressSeeder\src\Models\Province',
 
     /**
      * Province Name in the database.
@@ -74,7 +74,7 @@ return [
      *
      * This is the model that will be used to seed the districts.
      */
-    'district' => '\Dipesh79\LaravelNepalAddressSeeder\Models\District',
+    'district' => '\bootstrap\LaravelNepalAddressSeeder\src\Models\District',
 
     /**
      * District Name in the database.
@@ -88,7 +88,7 @@ return [
      *
      * This is the model that will be used to seed the local levels.
      */
-    'local_level' => '\Dipesh79\LaravelNepalAddressSeeder\Models\LocalLevel',
+    'local_level' => '\bootstrap\LaravelNepalAddressSeeder\src\Models\LocalLevel',
 
     /**
      * Local Level Name in the database.
@@ -120,12 +120,13 @@ You can use your own model, or you can model from our package.
 
 ### Province Model
 NOTE: If you are using our model, make sure you have soft delete column in your migration. If you are using our published migration, then we already have it.
+
 ```php
 <?php
 
 namespace Dipesh79\LaravelNepalAddressSeeder\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use bootstrap\LaravelNepalAddressSeeder\src\Models\District;use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -146,12 +147,13 @@ class Province extends Model
 }
 ```
 ### District Model
+
 ```php
 <?php
 
 namespace Dipesh79\LaravelNepalAddressSeeder\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use bootstrap\LaravelNepalAddressSeeder\src\Models\LocalLevel;use bootstrap\LaravelNepalAddressSeeder\src\Models\Province;use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -179,12 +181,13 @@ class District extends Model
 ```
 
 ### Local Level Model
+
 ```php
 <?php
 
 namespace Dipesh79\LaravelNepalAddressSeeder\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use bootstrap\LaravelNepalAddressSeeder\src\Models\District;use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -218,6 +221,10 @@ php artisan nepal-address:seed
 ```
 
 Now you can use the data in your database.
+
+### TODOS
+
+* Wards Count
 
 ## License
 
