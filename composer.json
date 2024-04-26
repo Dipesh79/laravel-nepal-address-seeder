@@ -1,0 +1,28 @@
+{
+    "name": "dipesh79/laravel-nepal-address-seeder",
+    "description": "Laravel Nepal Address Seeder - Get Migration And Seeder For Nepal's Province, Districts And Local Levels.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dipesh79\\LaravelNepalAddressSeeder\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dipesh79",
+            "email": "dipeshkhanal79@gmail.com",
+            "homepage": "https://www.khanaldipesh.com.np",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dipesh79\\LaravelNepalAddressSeeder\\NepalAddressServiceProvider"
+            ]
+        }
+    }
+}
