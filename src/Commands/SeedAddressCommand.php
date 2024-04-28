@@ -2,9 +2,9 @@
 
 namespace Dipesh79\LaravelNepalAddressSeeder\Commands;
 
-use bootstrap\LaravelNepalAddressSeeder\src\Data\Districts;
-use bootstrap\LaravelNepalAddressSeeder\src\Data\LocalLevels;
-use bootstrap\LaravelNepalAddressSeeder\src\Data\Provinces;
+use Dipesh79\LaravelNepalAddressSeeder\Data\Districts;
+use Dipesh79\LaravelNepalAddressSeeder\Data\LocalLevels;
+use Dipesh79\LaravelNepalAddressSeeder\Data\Provinces;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 

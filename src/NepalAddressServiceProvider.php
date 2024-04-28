@@ -3,6 +3,7 @@
 namespace Dipesh79\LaravelNepalAddressSeeder;
 
 
+use Dipesh79\LaravelNepalAddressSeeder\Commands\SeedAddressCommand;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +24,7 @@ class NepalAddressServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                \bootstrap\LaravelNepalAddressSeeder\src\Commands\SeedAddressCommand::class,
+                SeedAddressCommand::class,
             ]);
         }
         if (method_exists($this, 'publishes')) {
