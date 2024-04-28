@@ -219,9 +219,23 @@ You can seed the database using the following command. Before seeding, make sure
 ```bash
 php artisan nepal-address:seed
 ```
-
 Now you can use the data in your database.
+## V 0.0.4 Update
+Now you can add a flag to the command.
 
+### Import Province Only
+
+```bash
+php artisan nepal-address:seed --province
+```
+### Import District Only
+```bash
+php artisan nepal-address:seed --district
+```
+### Import Local Level Only
+```bash
+php artisan nepal-address:seed --local-level
+```
 ### TODOS
 
 * Wards Count

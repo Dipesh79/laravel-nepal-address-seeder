@@ -15,7 +15,7 @@ class SeedAddressCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'nepal-address:seed';
+    protected $signature = 'nepal-address:seed {--province} {--district} {--local-level}';
 
     /**
      * The console command description.
@@ -42,39 +42,25 @@ class SeedAddressCommand extends Command
         DB::beginTransaction();
         try {
             if ($option === 'Yes') {
-                $this->info('Seeding the province table...');
 
-                $provinceBar = $this->output->createProgressBar($provinceCount);
-                foreach ($provinces->getProvinces() as $province) {
-                    $province_array = $this->createProvinceFormat($province);
-                    config('nepal-address.province')::create($province_array);
-                    $provinceBar->advance();
+                if ($this->option('province')) {
+                    $this->provinceSeeder($provinceCount,$provinces);
                 }
-                $provinceBar->finish();
-                $this->line('');
-                $this->info('Province seeded successfully.');
+                if ($this->option('district')) {
+                    $this->districtSeeder($districtCount,$districts);
+                }
+                if ($this->option('local-level')) {
+                    $this->localLevelSeeder($localLevelCount,$localLevels);
+                }
+                if (!($this->option('province') || $this->option('district') || $this->option('local-level'))) {
+                    $this->info('Seeding the province table...');
 
-                $this->info('Seeding the district table...');
-                $districtBar = $this->output->createProgressBar($districtCount);
-                foreach ($districts->getDistricts() as $district) {
-                    $district_array = $this->createDistrictFormat($district);
-                    config('nepal-address.district')::create($district_array);
-                    $districtBar->advance();
-                }
-                $districtBar->finish();
-                $this->line('');
-                $this->info('District seeded successfully.');
+                    $this->provinceSeeder($provinceCount,$provinces);
 
-                $this->info('Seeding the local level table...');
-                $localLevelBar = $this->output->createProgressBar($localLevelCount);
-                foreach ($localLevels->getLocalLevels() as $localLevel) {
-                    $local_level_array = $this->createLocalLevelFormat($localLevel);
-                    config('nepal-address.local_level')::create($local_level_array);
-                    $localLevelBar->advance();
+                    $this->districtSeeder($districtCount,$districts);
+
+                    $this->localLevelSeeder($localLevelCount,$localLevels);
                 }
-                $localLevelBar->finish();
-                $this->line('');
-                $this->info('Local Level seeded successfully.');
             } else {
                 $this->warn('Seeding the address table aborted.');
             }
@@ -132,6 +118,47 @@ class SeedAddressCommand extends Command
             $local_level_array[config('nepal-address.local_level_wards')] = $localLevel['wards'];
         }
         return $local_level_array;
+    }
+
+    private function provinceSeeder($provinceCount, $provinces): void
+    {
+        $provinceBar = $this->output->createProgressBar($provinceCount);
+        foreach ($provinces->getProvinces() as $province) {
+            $province_array = $this->createProvinceFormat($province);
+            config('nepal-address.province')::firstOrCreate($province_array);
+            $provinceBar->advance();
+        }
+        $provinceBar->finish();
+        $this->line('');
+        $this->info('Province seeded successfully.');
+    }
+
+    private function districtSeeder($districtCount,$districts): void
+    {
+        $this->info('Seeding the district table...');
+        $districtBar = $this->output->createProgressBar($districtCount);
+        foreach ($districts->getDistricts() as $district) {
+            $district_array = $this->createDistrictFormat($district);
+            config('nepal-address.district')::firstOrCreate($district_array);
+            $districtBar->advance();
+        }
+        $districtBar->finish();
+        $this->line('');
+        $this->info('District seeded successfully.');
+    }
+
+    private function localLevelSeeder($localLevelCount,$localLevels): void
+    {
+        $this->info('Seeding the local level table...');
+        $localLevelBar = $this->output->createProgressBar($localLevelCount);
+        foreach ($localLevels->getLocalLevels() as $localLevel) {
+            $local_level_array = $this->createLocalLevelFormat($localLevel);
+            config('nepal-address.local_level')::firstOrCreate($local_level_array);
+            $localLevelBar->advance();
+        }
+        $localLevelBar->finish();
+        $this->line('');
+        $this->info('Local Level seeded successfully.');
     }
 
 
