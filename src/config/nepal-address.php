@@ -6,7 +6,7 @@ return [
      *
      * This is the model that will be used to seed the provinces.
      */
-    'province' => '\bootstrap\LaravelNepalAddressSeeder\src\Models\Province',
+    'province' => '\Dipesh79\LaravelNepalAddressSeeder\src\Models\Province',
 
     /**
      * Province Name in the database.
@@ -48,7 +48,7 @@ return [
      *
      * This is the model that will be used to seed the districts.
      */
-    'district' => '\bootstrap\LaravelNepalAddressSeeder\src\Models\District',
+    'district' => '\Dipesh79\LaravelNepalAddressSeeder\src\Models\District',
 
     /**
      * District Name in the database.
@@ -62,7 +62,7 @@ return [
      *
      * This is the model that will be used to seed the local levels.
      */
-    'local_level' => '\bootstrap\LaravelNepalAddressSeeder\src\Models\LocalLevel',
+    'local_level' => '\Dipesh79\LaravelNepalAddressSeeder\src\Models\LocalLevel',
 
     /**
      * Local Level Name in the database.
