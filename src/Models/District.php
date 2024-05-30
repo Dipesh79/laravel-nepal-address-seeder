@@ -2,8 +2,6 @@
 
 namespace Dipesh79\LaravelNepalAddressSeeder\Models;
 
-use bootstrap\LaravelNepalAddressSeeder\src\Models\LocalLevel;
-use bootstrap\LaravelNepalAddressSeeder\src\Models\Province;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;

@@ -2,7 +2,6 @@
 
 namespace Dipesh79\LaravelNepalAddressSeeder\Models;
 
-use bootstrap\LaravelNepalAddressSeeder\src\Models\District;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
