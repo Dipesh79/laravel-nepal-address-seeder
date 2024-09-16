@@ -56,15 +56,15 @@ class LocalLevels
     public function getDistrictOneLocalLevels(): array
     {
         return [
-            ['name' => 'Bhojpur', 'wards' => 12, 'district_id' => 12, 'name_np' => 'भोजपुर'],
-            ['name' => 'Shadanand', 'wards' => 14, 'district_id' => 14, 'name_np' => 'षडानन्द'],
-            ['name' => 'Hatuwagadhi', 'wards' => 9, 'district_id' => 9, 'name_np' => 'हातुवागढी'],
-            ['name' => 'Ramprasad Rai', 'wards' => 8, 'district_id' => 8, 'name_np' => 'रामप्रसाद राई'],
-            ['name' => 'Aamchowk', 'wards' => 10, 'district_id' => 10, 'name_np' => 'आमचोक'],
-            ['name' => 'Tyamke Maiyunm', 'wards' => 9, 'district_id' => 9, 'name_np' => 'ट्याम्के मयुङ'],
-            ['name' => 'Arun', 'wards' => 7, 'district_id' => 7, 'name_np' => 'अरुण'],
-            ['name' => 'Pauwadungma', 'wards' => 6, 'district_id' => 6, 'name_np' => 'पौवादुङमा'],
-            ['name' => 'Salpasilichho', 'wards' => 6, 'district_id' => 6, 'name_np' => 'साल्पासिलिछो']
+            ['name' => 'Bhojpur', 'wards' => 12, 'district_id' => 1, 'name_np' => 'भोजपुर'],
+            ['name' => 'Shadanand', 'wards' => 14, 'district_id' => 1, 'name_np' => 'षडानन्द'],
+            ['name' => 'Hatuwagadhi', 'wards' => 9, 'district_id' => 1, 'name_np' => 'हातुवागढी'],
+            ['name' => 'Ramprasad Rai', 'wards' => 8, 'district_id' => 1, 'name_np' => 'रामप्रसाद राई'],
+            ['name' => 'Aamchowk', 'wards' => 10, 'district_id' => 1, 'name_np' => 'आमचोक'],
+            ['name' => 'Tyamke Maiyunm', 'wards' => 9, 'district_id' => 1, 'name_np' => 'ट्याम्के मयुङ'],
+            ['name' => 'Arun', 'wards' => 7, 'district_id' => 1, 'name_np' => 'अरुण'],
+            ['name' => 'Pauwadungma', 'wards' => 6, 'district_id' => 1, 'name_np' => 'पौवादुङमा'],
+            ['name' => 'Salpasilichho', 'wards' => 6, 'district_id' => 1, 'name_np' => 'साल्पासिलिछो']
         ];
 
     }
