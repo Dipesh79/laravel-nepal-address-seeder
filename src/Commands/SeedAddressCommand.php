@@ -15,7 +15,7 @@ class SeedAddressCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'nepal-address:seed {--province} {--district} {--local-level}';
+    protected $signature = 'nepal-address:seed {--province} {--district} {--local-level} {--force}';
 
     /**
      * The console command description.
@@ -37,8 +37,13 @@ class SeedAddressCommand extends Command
         $districtCount = count($districts->getDistricts());
         $localLevelCount = count($localLevels->getLocalLevels());
 
-        $this->info('You are about to seed the address. Please make sure you have the configuration set up correctly.');
-        $option = $this->anticipate('Do you want to continue?', ['Yes', 'No'], 'Yes');
+        if ($this->option('force')) {
+            $option = 'Yes';
+        } else {
+            $this->info('You are about to seed the address. Please make sure you have the configuration set up correctly.');
+            $option = $this->anticipate('Do you want to continue?', ['Yes', 'No'], 'Yes');
+        }
+
         DB::beginTransaction();
         try {
             if ($option === 'Yes') {
