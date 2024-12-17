@@ -237,6 +237,15 @@ php artisan nepal-address:seed --district
 ```bash
 php artisan nepal-address:seed --local-level
 ```
+
+### Force Seed
+
+Use this flag to force seed the data. This will not ask for any prompt.
+
+```bash
+php artisan nepal-address:seed --force
+```
+
 ### TODOS
 
 * Wards Count
